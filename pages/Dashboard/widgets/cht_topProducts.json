@@ -181,10 +181,10 @@
     "renderMode": "CANVAS",
     "isLoading": false,
     "yAxisName": "Quantity",
-    "originalTopRow": 12,
+    "originalTopRow": 9,
     "chartName": "Top Ordered Products",
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "xAxisName": "Products",
-    "originalBottomRow": 51,
+    "originalBottomRow": 54,
     "chartType": "COLUMN_CHART"
 }

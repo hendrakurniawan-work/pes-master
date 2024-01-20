@@ -28,27 +28,22 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Companies_utils.getCustomerOrders",
-              "name": "utils.getCustomerOrders",
-              "collectionId": "Companies_utils",
+              "id": "Companies_Find_Asia1",
+              "name": "Find_Asia1",
               "confirmBeforeExecute": false,
-              "pluginType": "JS",
+              "pluginType": "SAAS",
               "jsonPathKeys": [
-                "async () => {\n  const customerOrders = await getCustomerOrders.run();\n  const data = customerOrders.map(o => {\n    return {\n      OrderId: o.id,\n      OrderDate: new Date(o.created).toDateString(),\n      Items: o.order_line_count,\n      Amount: o.total.toLocaleString('en-US', {\n        style: 'currency',\n        currency: 'USD'\n      }),\n      Status: o.label\n    };\n  });\n  return data;\n}"
+                "sel_addCompanyCountry.filterText",
+                "sel_addCompanyCountry.filterText ? \"Country\" : \"\""
               ],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
+            },
             {
-              "id": "Companies_utils.getCustomers",
-              "name": "utils.getCustomers",
-              "collectionId": "Companies_utils",
+              "id": "Companies_db_getCompany",
+              "name": "db_getCompany",
               "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async () => {\n  const customers = await getCustomers.run();\n  return customers.map(c => {\n    return {\n      ID: utils.idConverter(c.id),\n      CustomerID: c.id,\n      Name: c.first_name + ' ' + c.last_name,\n      Phone: c.phone,\n      Email: c.email,\n      BillingAddress: `${c.address1}${c.city || ''}${c.country || ''}`,\n      ShippingAddress: `${c.address1}${c.city || ''}${c.country || ''}`\n    };\n  });\n}"
-              ],
+              "pluginType": "DB",
+              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }
           ]

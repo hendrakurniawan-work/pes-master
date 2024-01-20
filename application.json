@@ -5,15 +5,11 @@
       "isDefault": true
     },
     {
-      "id": "Customers",
-      "isDefault": false
-    },
-    {
-      "id": "Products",
-      "isDefault": false
-    },
-    {
       "id": "Companies",
+      "isDefault": false
+    },
+    {
+      "id": "Customers",
       "isDefault": false
     }
   ],
@@ -37,12 +33,12 @@
     }
   },
   "color": "#D9E7FF",
-  "icon": "shopper",
+  "icon": "bag",
   "unpublishedAppLayout": {
-    "type": "DESKTOP"
+    "type": "FLUID"
   },
   "publishedAppLayout": {
-    "type": "DESKTOP"
+    "type": "FLUID"
   },
   "unpublishedCustomJSLibs": [
     {

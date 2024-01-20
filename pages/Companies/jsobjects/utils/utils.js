@@ -1,41 +1,46 @@
 export default {
-	
+
 	idConverter: (num) => {
 		let str = num.toString();
 		let leadingZeros = "00000".substring(0, 5 - str.length);
 		return 'C' + leadingZeros + str;
 	},
-	
-	getCustomers: async () => {
-		const customers = await getCustomers.run();
 
-		return customers.map(c => {
+	getCompanies: async () => {
+		const companies = await db_getCompany.run();
+
+		return companies.map(co => {
 			return {
-				ID: this.idConverter(c.id),
-				CustomerID: c.id,
-				Name: c.first_name + ' ' + c.last_name,
-				Phone: c.phone,
-				Email: c.email,
-				BillingAddress: `${c.address1}${ c.city || ''}${ c.country || ''}`,
-				ShippingAddress: `${c.address1}${ c.city || ''}${ c.country || ''}`,
+				ID: co._id,
+				CompanyName: co.company_name,
+				CompanyAddress: co.company_address,
+				Country: co.country,
+				PostalCode: co.postal_code,
+				CreatedAt: Date(co.created_at),
+				UpdatedAt: Date(co.updated_at)
 			}
 		})
 	},
 
-	getCustomerOrders: async () => {
-		const customerOrders = await getCustomerOrders.run();
+	addCompany: async () => {
+		await db_createCompany.run()
 
-		const data = customerOrders.map(o => {
-			return {
-				OrderId: o.id,
-				OrderDate: new Date(o.created).toDateString(),
-				Items: o.order_line_count,
-				Amount: o.total.toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
-				Status: o.label
-			}
-		})
-		
-		return data;
+		closeModal('mdl_addCompany');
+
+		await this.getCompanies();
+
+		showAlert('Company created!', 'success');
+	},
+
+	updateCompany: async () => {
+		await db_updateCompany.run()
+
+		closeModal('mdl_companyDetails');
+
+		await this.getCompanies();
+
+		showAlert('Company updated!', 'success');
+
 	},
 
 	statusColor: (status) => {
@@ -50,40 +55,4 @@ export default {
 		}
 		return 'RGB(255, 165, 0)'
 	},
-	
-	addCustomer: async () => {
-		const person = await createPerson.run()
-		
-		await createAccount.run({
-			personId: person[0].id
-		})
-		
-		await createLocation.run({
-			personId: person[0].id
-		})
-		
-		closeModal('mdl_addCustomer');
-		
-		await this.getCustomers();
-		
-		showAlert('Customer created!', 'success');
-	}
-	
-		addCompany: async () => {
-		const company = await createCompany.run()
-		
-		await createAccount.run({
-			personId: person[0].id
-		})
-		
-		await createLocation.run({
-			personId: person[0].id
-		})
-		
-		closeModal('mdl_addCustomer');
-		
-		await this.getCustomers();
-		
-		showAlert('Customer created!', 'success');
-	}
 }
