@@ -11,6 +11,10 @@
     {
       "id": "Customers",
       "isDefault": false
+    },
+    {
+      "id": "Products",
+      "isDefault": false
     }
   ],
   "viewMode": false,

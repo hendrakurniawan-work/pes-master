@@ -1,0 +1,11 @@
+{
+  "insert": "customer",
+  "documents": [{
+	"first_name": {{inp_addCustomerFirstName.text}}, 
+	"last_name": {{inp_addCustomerLastName.text}},
+	"email": {{inp_addCustomerEmail.text}},
+	"phone_number": +{{inp_addCustomerPhoneNumber.text}},
+	"created_at": {{Date.now()}},
+	"updated_at": {{Date.now()}}
+}]
+}

@@ -1,0 +1,89 @@
+{
+    "isCompact": false,
+    "boxShadow": "none",
+    "widgetName": "btn_menu",
+    "displayName": "Menu Button",
+    "iconSVG": "/static/media/icon.0341d17d.svg",
+    "topRow": 2,
+    "bottomRow": 6,
+    "parentRowSpace": 10,
+    "type": "MENU_BUTTON_WIDGET",
+    "hideCard": false,
+    "animateLoading": true,
+    "parentColumnSpace": 12.01953125,
+    "dynamicTriggerPathList": [
+        {"key": "menuItems.menuItem2.onClick"},
+        {"key": "menuItems.menuItembfox91roho.onClick"},
+        {"key": "menuItems.menuItem3.onClick"},
+        {"key": "menuItems.menuItem8h40bey7xc.onClick"},
+        {"key": "menuItems.menuItem3s5cf1ys7e.onClick"}
+    ],
+    "leftColumn": 60,
+    "dynamicBindingPathList": [{"key": "borderRadius"}],
+    "isDisabled": false,
+    "key": "xhh0ol5f83",
+    "sourceDataKeys": [],
+    "isDeprecated": false,
+    "rightColumn": 63,
+    "iconName": "menu",
+    "menuVariant": "TERTIARY",
+    "widgetId": "beb740s72b",
+    "menuItems": {
+        "menuItem3": {
+            "onClick": "{{navigateTo('Purchase Orders', {})}}",
+            "widgetId": "",
+            "index": 3,
+            "label": "Purchase Orders",
+            "id": "menuItem3",
+            "isVisible": true,
+            "isDisabled": false
+        },
+        "menuItem8h40bey7xc": {
+            "onClick": "{{navigateTo('Warehouses', {}, 'SAME_WINDOW')}}",
+            "widgetId": "2dqe57r1cm",
+            "index": 4,
+            "id": "menuItem8h40bey7xc",
+            "label": "Warehouses",
+            "isDisabled": false,
+            "isVisible": true
+        },
+        "menuItem2": {
+            "onClick": "{{navigateTo('Dashboard', {})}}",
+            "widgetId": "",
+            "index": 0,
+            "label": "Dashboard",
+            "id": "menuItem2",
+            "isVisible": true,
+            "isDisabled": false
+        },
+        "menuItem3s5cf1ys7e": {
+            "onClick": "{{navigateTo('Suppliers', {}, 'SAME_WINDOW')}}",
+            "widgetId": "z64tuw7dzi",
+            "index": 2,
+            "id": "menuItem3s5cf1ys7e",
+            "label": "Suppliers",
+            "isDisabled": false,
+            "isVisible": true
+        },
+        "menuItembfox91roho": {
+            "onClick": "{{navigateTo('Products', {})}}",
+            "widgetId": "u91c9yytwt",
+            "index": 1,
+            "id": "menuItembfox91roho",
+            "label": "Products",
+            "isDisabled": false,
+            "isVisible": true
+        }
+    },
+    "isVisible": true,
+    "label": "",
+    "version": 1,
+    "parentId": "tmbvh49qet",
+    "renderMode": "CANVAS",
+    "isLoading": false,
+    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+    "menuColor": "#fafafa",
+    "menuItemsSource": "STATIC",
+    "iconAlign": "left",
+    "placement": "CENTER"
+}
