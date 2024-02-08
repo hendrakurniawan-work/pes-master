@@ -70,7 +70,7 @@
           }
         },
         "path": {
-          "data": "dwg/{{tbl_products.triggeredRow.drawing_filename}}"
+          "data": "dwg/{{this.params.file_path}}"
         },
         "read": {
           "dataType": {
@@ -92,7 +92,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "tbl_products.triggeredRow.drawing_filename"
+      "this.params.file_path"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

@@ -1,6 +1,14 @@
 {
   "pages": [
     {
+      "id": "Home2",
+      "isDefault": false
+    },
+    {
+      "id": "Home",
+      "isDefault": false
+    },
+    {
       "id": "Dashboard",
       "isDefault": true
     },
@@ -14,6 +22,10 @@
     },
     {
       "id": "Products",
+      "isDefault": false
+    },
+    {
+      "id": "Quotations",
       "isDefault": false
     }
   ],

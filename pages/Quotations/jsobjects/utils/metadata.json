@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "utils",
+    "pageId": "Quotations",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Quotations_utils",
+  "deleted": false,
+  "gitSyncId": "65a5e79ee33b1a6bc02ff5b3_65c44e762717f21db7dce239"
+}

@@ -29,7 +29,7 @@
           }
         },
         "body": {
-          "data": "{\n  \"insert\": \"product\",\n  \"documents\": [{\n\t\"name\": {{inp_productName.text}}, \n\t\"material\": {{inp_productMaterial.text}},\n\t\"treatment\": {{inp_productTreatment.text}},\n\t\"description\": {{inp_productDescription.text}},\n\t\"drawing\": {\n\t\t\"number\": {{inp_productDrawingNumber.text}}\n\t\t\"\"\n\t},\n\t\"created_at\": {{Date.now()}},\n\t\"updated_at\": {{Date.now()}}\n}]\n}\n"
+          "data": "{\n  \"insert\": \"product\",\n  \"documents\": [{\n\t\"name\": {{inp_addProductName.text}}, \n\t\"material\": {{inp_addProductMaterial.text}},\n\t\"treatment\": {{inp_addProductTreatment.text}},\n\t\"description\": {{inp_addProductDescription.text}},\n\t\"drawing\": {\n\t\t\"number\": {{txt_drawingNumber.text}}\n\t\t\"\"\n\t},\n\t\"created_at\": {{Date.now()}},\n\t\"updated_at\": {{Date.now()}}\n}]\n}\n"
         },
         "collection": {
           "data": "product"
@@ -77,7 +77,7 @@
         },
         "insert": {
           "documents": {
-            "data": "[{\n\t\"name\": {{inp_productName.text}}, \n\t\"material\": {{inp_productMaterial.text}},\n\t\"treatment\": {{inp_productTreatment.text}},\n\t\"description\": {{inp_productDescription.text}},\n\t\"drawing\": {\n\t\t\"number\": {{inp_productDrawingNumber.text}}\n\t\t\"file_name\": {{fp_drawingImage.files[0].name}}\n\t},\n\t\"created_at\": {{Date.now()}},\n\t\"updated_at\": {{Date.now()}}\n}]"
+            "data": "[{\n\t\"name\": {{inp_addProductName.text}}, \n\t\"material\": {{inp_addProductMaterial.text}},\n\t\"treatment\": {{inp_addProductTreatment.text}},\n\t\"description\": {{inp_addProductDescription.text}},\n\t\"drawing\": {\n\t\t\"number\": {{inp_addProductDrawingNumber.text}},\n\t\t\"url\": {{this.params.image_url}},\n\t\t\"file_path\" : {{this.params.file_path}}\n\t},\n\t\"created_at\": {{Date.now()}},\n\t\"updated_at\": {{Date.now()}}\n}]"
           }
         },
         "misc": {
@@ -116,12 +116,19 @@
     "messages": [],
     "jsonPathKeys": [
       "Date.now()",
-      "fp_drawingImage.files[0].name",
+      "inp_addProductDescription.text",
+      "inp_addProductDrawingNumber.text",
+      "inp_addProductMaterial.text",
+      "inp_addProductName.text",
+      "inp_addProductTreatment.text",
       "inp_productDescription.text",
       "inp_productDrawingNumber.text",
       "inp_productMaterial.text",
       "inp_productName.text",
-      "inp_productTreatment.text"
+      "inp_productTreatment.text",
+      "this.params.file_path",
+      "this.params.image_url",
+      "txt_drawingNumber.text"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

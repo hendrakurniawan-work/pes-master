@@ -35,9 +35,9 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2024-01-26T06:51:47Z"
+    "createdAt": "2024-02-08T03:56:38Z"
   },
   "id": "Products_utils.addProduct",
   "deleted": false,
-  "gitSyncId": "65a5e79ee33b1a6bc02ff5b3_65b3568318b3ec7241c8c280"
+  "gitSyncId": "65a5e79ee33b1a6bc02ff5b3_65c450f69ff92234089a356d"
 }

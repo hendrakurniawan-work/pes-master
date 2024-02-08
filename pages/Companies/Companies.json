@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1280,
+          "bottomRow": 1320,
           "containerStyle": "none",
           "snapRows": 99,
           "parentRowSpace": 1,
@@ -28,6 +28,16 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "Companies_db_getCompany",
+              "name": "db_getCompany",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "Companies_Find_Asia1",
               "name": "Find_Asia1",
               "confirmBeforeExecute": false,
@@ -36,14 +46,6 @@
                 "sel_addCompanyCountry.filterText",
                 "sel_addCompanyCountry.filterText ? \"Country\" : \"\""
               ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Companies_db_getCompany",
-              "name": "db_getCompany",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }
           ]

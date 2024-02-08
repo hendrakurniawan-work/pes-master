@@ -79,7 +79,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"update\": \"customer\",\n  \"updates\": [{\n    \"q\": { \n  \"_id\": ObjectId({{tbl_customers.selectedRow._id}})\n},\n    \"u\": { \n  \"$set\": {\n    \"first_name\": {{inp_updateCustomerFirstName.text}}, \n  \"last_name\": {{inp_updateCustomerLastName.text}},\n\"email\": {{inp_updateCustomerEmail.text}},\n\"phone_number_country_code\": {{inp_updateCustomerPhone.dialCode}},\n\"phone_number\": {{inp_updateCustomerPhone.text}},\n\"company_id\": {{sel_updateCustomerCompany.selectedOptionValue}},\n\"updated_at\": {{Date.now()}},\n}},\n    \"multi\": false,\n  }]\n}\n",
+            "data": "{\n  \"update\": \"customer\",\n  \"updates\": [{\n    \"q\": { \n  \"_id\": ObjectId({{tbl_customers.selectedRow._id}})\n},\n    \"u\": { \n  \"$set\": {\n    \"first_name\": {{inp_updateCustomerFirstName.text}}, \n  \"last_name\": {{inp_updateCustomerLastName.text}},\n\"email\": {{inp_updateCustomerEmail.text}},\n\"phone_number_country_code\": {{inp_updateCustomerPhoneNumber.dialCode}},\n\"phone_number\": {{inp_updateCustomerPhoneNumber.text}},\n\"company_id\": {{sel_updateCustomerCompanyName.selectedOptionValue}},\n\"updated_at\": {{Date.now()}},\n}},\n    \"multi\": false,\n  }]\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -94,7 +94,7 @@
             "data": "{ \n  \"_id\": ObjectId({{tbl_customers.selectedRow._id}})\n}"
           },
           "update": {
-            "data": "{ \n  \"$set\": {\n    \"first_name\": {{inp_updateCustomerFirstName.text}}, \n  \"last_name\": {{inp_updateCustomerLastName.text}},\n\"email\": {{inp_updateCustomerEmail.text}},\n\"phone_number_country_code\": {{inp_updateCustomerPhone.dialCode}},\n\"phone_number\": {{inp_updateCustomerPhone.text}},\n\"company_id\": {{sel_updateCustomerCompany.selectedOptionValue}},\n\"updated_at\": {{Date.now()}},\n}}"
+            "data": "{ \n  \"$set\": {\n    \"first_name\": {{inp_updateCustomerFirstName.text}}, \n  \"last_name\": {{inp_updateCustomerLastName.text}},\n\"email\": {{inp_updateCustomerEmail.text}},\n\"phone_number_country_code\": {{inp_updateCustomerPhoneNumber.dialCode}},\n\"phone_number\": {{inp_updateCustomerPhoneNumber.text}},\n\"company_id\": {{sel_updateCustomerCompanyName.selectedOptionValue}},\n\"updated_at\": {{Date.now()}},\n}}"
           }
         }
       }
@@ -116,9 +116,9 @@
       "inp_updateCustomerEmail.text",
       "inp_updateCustomerFirstName.text",
       "inp_updateCustomerLastName.text",
-      "inp_updateCustomerPhone.dialCode",
-      "inp_updateCustomerPhone.text",
-      "sel_updateCustomerCompany.selectedOptionValue",
+      "inp_updateCustomerPhoneNumber.dialCode",
+      "inp_updateCustomerPhoneNumber.text",
+      "sel_updateCustomerCompanyName.selectedOptionValue",
       "tbl_customers.selectedRow._id"
     ],
     "userSetOnLoad": false,

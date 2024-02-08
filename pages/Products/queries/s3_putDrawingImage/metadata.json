@@ -21,7 +21,7 @@
       "selfReferencingDataPaths": [],
       "formData": {
         "body": {
-          "data": "{{fp_drawingImage.files[0]}}"
+          "data": "{{fpk_addProductDrawingImage.files[0] ? fpk_addProductDrawingImage.files[0] : ''}}"
         },
         "bucket": {
           "data": "pes-drawing-image"
@@ -70,7 +70,7 @@
           }
         },
         "path": {
-          "data": "dwg/{{fp_drawingImage.files[0].name}}"
+          "data": "dwg/{{this.params.file_path}}"
         },
         "read": {
           "dataType": {
@@ -95,8 +95,8 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "fp_drawingImage.files[0]",
-      "fp_drawingImage.files[0].name"
+      "fpk_addProductDrawingImage.files[0] ? fpk_addProductDrawingImage.files[0] : ''",
+      "this.params.file_path"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

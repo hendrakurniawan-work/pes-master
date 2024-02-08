@@ -35,7 +35,7 @@ export default {
 	updateCompany: async () => {
 		await db_updateCompany.run()
 
-		closeModal('mdl_companyDetails');
+		closeModal('mdl_updateCompany');
 
 		await this.getCompanies();
 

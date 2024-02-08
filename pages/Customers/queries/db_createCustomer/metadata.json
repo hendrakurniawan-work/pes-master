@@ -75,12 +75,12 @@
         },
         "insert": {
           "documents": {
-            "data": "[{\n\t\"first_name\": {{inp_addCustomerFirstName.text}}, \n\t\"last_name\": {{inp_addCustomerLastName.text}},\n\t\"email\": {{inp_addCustomerEmail.text}},\n\t\"phone_number_country_code\": {{inp_addCustomerPhoneNumber.dialCode}},\n\t\"phone_number\": {{inp_addCustomerPhoneNumber.text}},\n\t\"company_id\": {{sel_addCustomerCompanyName.selectedOptionValue}}\n\t\"created_at\": {{Date.now()}},\n\t\"updated_at\": {{Date.now()}}\n}]"
+            "data": "[{\n\t\"first_name\": {{inp_addCustomerFirstName.text}}, \n\t\"last_name\": {{inp_addCustomerLastName.text}},\n\t\"email\": {{inp_addCustomerEmail.text}},\n\t\"phone_number_country_code\": {{inp_addCustomerPhoneNumber.dialCode}},\n\t\"phone_number\": {{inp_addCustomerPhoneNumber.text}},\n\t\"company_id\": {{sel_addCustomerCompanyName.selectedOptionValue}},\n\t\"created_at\": {{Date.now()}},\n\t\"updated_at\": {{Date.now()}}\n}]"
           }
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"insert\": \"customer\",\n  \"documents\": [{\n\t\"first_name\": {{inp_addCustomerFirstName.text}}, \n\t\"last_name\": {{inp_addCustomerLastName.text}},\n\t\"email\": {{inp_addCustomerEmail.text}},\n\t\"phone_number_country_code\": {{inp_addCustomerPhoneNumber.dialCode}},\n\t\"phone_number\": {{inp_addCustomerPhoneNumber.text}},\n\t\"company_id\": {{sel_addCustomerCompanyName.selectedOptionValue}}\n\t\"created_at\": {{Date.now()}},\n\t\"updated_at\": {{Date.now()}}\n}]\n}\n",
+            "data": "{\n  \"insert\": \"customer\",\n  \"documents\": [{\n\t\"first_name\": {{inp_addCustomerFirstName.text}}, \n\t\"last_name\": {{inp_addCustomerLastName.text}},\n\t\"email\": {{inp_addCustomerEmail.text}},\n\t\"phone_number_country_code\": {{inp_addCustomerPhoneNumber.dialCode}},\n\t\"phone_number\": {{inp_addCustomerPhoneNumber.text}},\n\t\"company_id\": {{sel_addCustomerCompanyName.selectedOptionValue}},\n\t\"created_at\": {{Date.now()}},\n\t\"updated_at\": {{Date.now()}}\n}]\n}\n",
             "status": "SUCCESS"
           }
         },

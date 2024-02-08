@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 970,
+          "bottomRow": 780,
           "containerStyle": "none",
           "snapRows": 95,
           "parentRowSpace": 1,
@@ -33,83 +33,6 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Products_getProductLocations",
-              "name": "getProductLocations",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "this.params.variationId"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Products_getProducts",
-              "name": "getProducts",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Products_getPurchaseOrders",
-              "name": "getPurchaseOrders",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Products_getSupplier",
-              "name": "getSupplier",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "this.params.supplierId"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Products_getSupplierProduct",
-              "name": "getSupplierProduct",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "this.params.id"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Products_getSupplierProducts",
-              "name": "getSupplierProducts",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "this.params.supplierId"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Products_getWarehouses",
-              "name": "getWarehouses",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Products_utils.getProductDrawingImage",
-              "name": "utils.getProductDrawingImage",
-              "collectionId": "Products_utils",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "() => {\n  return s3_getDrawingImage.run();\n}"
-              ],
               "timeoutInMillisecond": 10000
             }
           ]

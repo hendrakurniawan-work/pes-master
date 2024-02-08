@@ -28,6 +28,9 @@
             "data": ""
           }
         },
+        "body": {
+          "data": "{\n  \"update\": \"product\",\n  \"updates\": [{\n    \"q\": { \n  \"_id\": ObjectId({{tbl_products.triggeredRow._id}})\n},\n    \"u\": [{\n\t\"name\": {{inp_productDetailName.text}}, \n\t\"material\": {{inp_productDetailMaterial.text}},\n\t\"treatment\": {{inp_productDetailTreatment.text}},\n\t\"description\": {{inp_addProductDescription.text}},\n\t\"drawing\": {\n\t\t\"number\": {{inp_productDetailDrawingNumber.text}}\n\t\t\"file_name\": {{fp_productDetailDrawingImage.files[0] ? fp_productDetailDrawingImage.files[0] : ''}}\n\t},\n\t\"updated_at\": {{Date.now()}}\n}],\n    \"multi\": false,\n  }]\n}\n"
+        },
         "collection": {
           "data": "product"
         },
@@ -79,7 +82,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"update\": \"product\",\n  \"updates\": [{\n    \"q\": { \n  \"_id\": ObjectId({{tbl_products.triggeredRow._id}})\n},\n    \"u\": [{\n\t\"name\": {{inp_productDetailName.text}}, \n\t\"material\": {{inp_productDetailMaterial.text}},\n\t\"treatment\": {{inp_productDetailTreatment.text}},\n\t\"description\": {{inp_productDescription.text}},\n\t\"drawing\": {\n\t\t\"number\": {{inp_productDetailDrawingNumber.text}}\n\t\t\"file_name\": {{fp_productDetailDrawingImage.files[0].name}}\n\t},\n\t\"updated_at\": {{Date.now()}}\n}],\n    \"multi\": false,\n  }]\n}\n",
+            "data": "{\n  \"update\": \"product\",\n  \"updates\": [{\n    \"q\": { \n  \"_id\": ObjectId({{tbl_products.triggeredRow._id}})\n},\n    \"u\": [{\n\t\"name\": {{inp_productDetailName.text}}, \n\t\"material\": {{inp_productDetailMaterial.text}},\n\t\"treatment\": {{inp_productDetailTreatment.text}},\n\t\"description\": {{inp_productDescription.text}},\n\t\"drawing\": {\n\t\t\"number\": {{inp_productDetailDrawingNumber.text}}\n\t\t\"file_name\": {{fp_productDetailDrawingImage.files[0] ? fp_productDetailDrawingImage.files[0] : ''}}\n\t},\n\t\"updated_at\": {{Date.now()}}\n}],\n    \"multi\": false,\n  }]\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -91,10 +94,10 @@
             "data": "SINGLE"
           },
           "query": {
-            "data": "{ \n  \"_id\": ObjectId({{tbl_products.triggeredRow._id}})\n}"
+            "data": "{ \n  \"_id\": ObjectId({{tbl_products.selectedRow._id}})\n}"
           },
           "update": {
-            "data": "[{\n\t\"name\": {{inp_productDetailName.text}}, \n\t\"material\": {{inp_productDetailMaterial.text}},\n\t\"treatment\": {{inp_productDetailTreatment.text}},\n\t\"description\": {{inp_productDescription.text}},\n\t\"drawing\": {\n\t\t\"number\": {{inp_productDetailDrawingNumber.text}}\n\t\t\"file_name\": {{fp_productDetailDrawingImage.files[0].name}}\n\t},\n\t\"updated_at\": {{Date.now()}}\n}]"
+            "data": "{ \"$set\": {\n\t\"name\": {{inp_updateProductName.text}}, \n\t\"material\": {{inp_updateProductMaterial.text}},\n\t\"treatment\": {{inp_updateProductTreatment.text}},\n\t\"description\": {{inp_updateProductDescription.text}},\n\t\"drawing\": {\n\t\t\"number\": {{inp_updateProductDrawingNumber.text}},\n\t\t\"url\": {{this.params.image_url}},\n\t\t\"file_path\" : {{this.params.file_path}}\n\t},\n\t\"updated_at\": {{Date.now()}}\n}}"
           }
         }
       }
@@ -106,6 +109,9 @@
       },
       {
         "key": "formData.updateMany.update.data"
+      },
+      {
+        "key": "formData.body.data"
       }
     ],
     "isValid": true,
@@ -113,13 +119,22 @@
     "messages": [],
     "jsonPathKeys": [
       "Date.now()",
-      "fp_productDetailDrawingImage.files[0].name",
+      "fp_productDetailDrawingImage.files[0] ? fp_productDetailDrawingImage.files[0] : ''",
+      "inp_addProductDescription.text",
       "inp_productDescription.text",
       "inp_productDetailDrawingNumber.text",
       "inp_productDetailMaterial.text",
       "inp_productDetailName.text",
       "inp_productDetailTreatment.text",
-      "tbl_products.triggeredRow._id"
+      "inp_updateProductDescription.text",
+      "inp_updateProductDrawingNumber.text",
+      "inp_updateProductMaterial.text",
+      "inp_updateProductName.text",
+      "inp_updateProductTreatment.text",
+      "tbl_products.selectedRow._id",
+      "tbl_products.triggeredRow._id",
+      "this.params.file_path",
+      "this.params.image_url"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

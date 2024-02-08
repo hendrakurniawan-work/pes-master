@@ -97,7 +97,7 @@
             "data": "{ \n  \"_id\": ObjectId({{tbl_companies.selectedRow._id}})\n}"
           },
           "update": {
-            "data": "{ \n  \"$set\": {\n    \"company_name\": {{inp_updateCompanyName.text}}, \n  \t\"company_address\": {{inp_updateCompanyAddress.text}},\n  \t\"country\": {{sel_updateCompanyCountry.selectedOptionValue}},\n  \t\"postal_code\": {{inp_updateCompanyPostalCode.text}},\n  \t\"updated_at\": {{Date.now()}}\n  }\n}"
+            "data": "{\n  \"$set\": {\n\t\"company_name\": {{inp_updateCompanyName.text}}, \n\t\"company_phone_dial_code\": {{inp_updateCompanyPhone.dialCode}},\n\t\"company_phone\": {{inp_updateCompanyPhone.text}},\n\t\"company_address\": {{inp_updateCompanyAddress.text}},\n\t\"city\": {{inp_updateCompanyCity.text}},\n\t\"province\" : {{inp_updateCompanyProvince.text}}\n\t\"country\": {{sel_updateCompanyCountry.selectedOptionValue}},\n\t\"postal_code\": {{inp_updateCompanyPostalCode.text}},\n\t\"updated_at\": {{Date.now()}}\n}}"
           }
         }
       }
@@ -117,8 +117,12 @@
     "jsonPathKeys": [
       "Date.now()",
       "inp_updateCompanyAddress.text",
+      "inp_updateCompanyCity.text",
       "inp_updateCompanyName.text",
+      "inp_updateCompanyPhone.dialCode",
+      "inp_updateCompanyPhone.text",
       "inp_updateCompanyPostalCode.text",
+      "inp_updateCompanyProvince.text",
       "sel_updateCompanyCountry.selectedOptionValue",
       "tbl_companies.selectedRow._id"
     ],

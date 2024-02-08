@@ -74,12 +74,12 @@
         },
         "insert": {
           "documents": {
-            "data": "[{\n\t\"company_name\": {{inp_addCompanyName.text}}, \n\t\"company_address\": {{inp_addCompanyAddress.text}},\n\t\"country\": {{sel_addCompanyCountry.selectedOptionValue}},\n\t\"postal_code\": {{inp_addCompanyPostalCode.text}},\n\t\"created_at\": {{Date.now()}},\n\t\"updated_at\": {{Date.now()}}\n}]"
+            "data": "[{\n\t\"company_name\": {{inp_addCompanyName.text}}, \n\t\"company_phone_dial_code\": {{inp_addCompanyPhone.dialCode}},\n\t\"company_phone\": {{inp_addCompanyPhone.text}},\n\t\"company_address\": {{inp_addCompanyAddress.text}},\n\t\"city\": {{inp_addCompanyCity.text}},\n\t\"province\" : {{inp_addCompanyProvince.text}}\n\t\"country\": {{sel_addCompanyCountry.selectedOptionValue}},\n\t\"postal_code\": {{inp_addCompanyPostalCode.text}},\n\t\"created_at\": {{Date.now()}},\n\t\"updated_at\": {{Date.now()}}\n}]"
           }
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"insert\": \"company\",\n  \"documents\": [{\n\t\"company_name\": {{inp_addCompanyName.text}}, \n\t\"company_address\": {{inp_addCompanyAddress.text}},\n\t\"country\": {{sel_addCompanyCountry.selectedOptionValue}},\n\t\"postal_code\": {{inp_addCompanyPostalCode.text}},\n\t\"created_at\": {{Date.now()}},\n\t\"updated_at\": {{Date.now()}}\n}]\n}\n",
+            "data": "{\n  \"insert\": \"company\",\n  \"documents\": [{\n\t\"company_name\": {{inp_addCompanyName.text}}, \n\t\"company_phone_dial_code\": {{inp_addCompanyPhone.dialCode}},\n\t\"company_phone\": {{inp_addCompanyPhone.text}},\n\t\"company_address\": {{inp_addCompanyAddress.text}},\n\t\"city\": {{inp_addCompanyCity.text}},\n\t\"province\" : {{inp_addCompanyProvince.text}}\n\t\"country\": {{sel_addCompanyCountry.selectedOptionValue}},\n\t\"postal_code\": {{inp_addCompanyPostalCode.text}},\n\t\"created_at\": {{Date.now()}},\n\t\"updated_at\": {{Date.now()}}\n}]\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -111,8 +111,12 @@
     "jsonPathKeys": [
       "Date.now()",
       "inp_addCompanyAddress.text",
+      "inp_addCompanyCity.text",
       "inp_addCompanyName.text",
+      "inp_addCompanyPhone.dialCode",
+      "inp_addCompanyPhone.text",
       "inp_addCompanyPostalCode.text",
+      "inp_addCompanyProvince.text",
       "sel_addCompanyCountry.selectedOptionValue"
     ],
     "userSetOnLoad": false,

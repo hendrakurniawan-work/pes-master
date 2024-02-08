@@ -50,19 +50,6 @@
           ],
           [
             {
-              "id": "Dashboard_utils.topOrderedProductsChart",
-              "name": "utils.topOrderedProductsChart",
-              "collectionId": "Dashboard_utils",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async () => {\n  const orderedProductsCount = await getOrderProductCount.run();\n  return orderedProductsCount.map(p => {\n    return {\n      x: p.name,\n      y: p.variant_count\n    };\n  });\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "Dashboard_utils.calculateAvFulfilTIme",
               "name": "utils.calculateAvFulfilTIme",
               "collectionId": "Dashboard_utils",
@@ -70,6 +57,17 @@
               "pluginType": "JS",
               "jsonPathKeys": [
                 "async () => {\n  const data = await getReturns.run();\n  const orders = {};\n  data.forEach(row => {\n    if (!orders[row.order_id]) {\n      orders[row.order_id] = {\n        order_id: row.order_id,\n        first_created: row.created,\n        last_created: row.created,\n        count: 1\n      };\n    } else {\n      const order = orders[row.order_id];\n      if (row.created < order.first_created) {\n        order.first_created = row.created;\n      }\n      if (row.created > order.last_created) {\n        order.last_created = row.created;\n      }\n      order.count += 1;\n    }\n  });\n  const averages = [];\n  Object.values(orders).forEach(order => {\n    if (order.count > 1) {\n      const firstDate = new Date(order.first_created);\n      const lastDate = new Date(order.last_created);\n      const diffTime = Math.abs(lastDate - firstDate);\n      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));\n      averages.push({\n        order_id: order.order_id,\n        avg_time: diffDays\n      });\n    }\n  });\n  const total = averages.reduce((acc, {avg_time}) => acc + avg_time, 0);\n  const overallAvg = total / averages.length;\n  return overallAvg ? overallAvg.toFixed(2) : 1.2;\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Dashboard_utils.topOrderedProductsChart",
+              "name": "utils.topOrderedProductsChart",
+              "collectionId": "Dashboard_utils",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n  const orderedProductsCount = await getOrderProductCount.run();\n  return orderedProductsCount.map(p => {\n    return {\n      x: p.name,\n      y: p.variant_count\n    };\n  });\n}"
               ],
               "timeoutInMillisecond": 10000
             }

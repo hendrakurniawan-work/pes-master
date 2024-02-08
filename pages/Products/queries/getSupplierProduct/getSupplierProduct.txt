@@ -1,1 +1,0 @@
-SELECT * FROM company_product WHERE id = {{this.params.id}};
